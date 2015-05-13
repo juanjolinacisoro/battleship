@@ -38,6 +38,6 @@ La terminal de git es una consola que en window se ve como una pantalla negra, q
 ## Problemas detectados en windows 8
 1. Para windows 8 no existe un menu o barra de herramientas por lo que se deben realizar las ordenes mediante la ventana de comandos.
 
-2. Hemos detectado en window 7 que el comando `pull` no funciona. La solucion es hacer un llamado a `git fetch` seguido de la instruccion `git merge origin/master`.
+2. Hemos detectado en window 7 que el comando `pull` no funciona. La solucion es hacer un llamado a `git fetch` seguido de la instruccion `git merge origin/master`..
 
 
