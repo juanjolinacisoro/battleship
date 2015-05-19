@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication13;
+package battleship;
 
 /**
  *
- * @author Javier
+ * @author Usuario
  */
 public class Tablero 
 {
