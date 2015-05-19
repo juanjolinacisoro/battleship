@@ -14,62 +14,32 @@ class Disparo
     public int disparojugadorx;
     public int disparojugadory;
     public int jugador;
-    int[][] matrizjugador;
-    int[][] matrizcpu;
+    String[][] disparos;
+    int a;
     
     public Disparo()
     {
         disparojugadorx = 0;
         disparojugadory = 0;
-        jugador = 0;
-        matrizjugador= new int [10][10];
-        matrizcpu= new int [10][10];
+        disparos = new String [10][10];
+        a=0;
     }   
   
-   int validardisparo(int x, int y, int j) // que no se repita y este dentro del tablero
+   int validardisparo(int x, int y,String[][] tablero) // que no se repita y este dentro del tablero
    {
        this.disparojugadorx = x;
        this.disparojugadory = y;
-       this.jugador = j;
+       this.disparos = tablero;
        
-       if(jugador%2==0)
+       if(disparojugadorx<=9 && disparojugadorx>=0&& disparos[disparojugadorx][disparojugadory]!="X"&& disparos[disparojugadorx][disparojugadory]!="H")
        {
-            if(disparojugadorx<=9 && disparojugadorx>=0&& disparojugadory<=9 && disparojugadory>=0)
-            {
-               if(matrizcpu[disparojugadorx][disparojugadory]==0)
-               {
-                   matrizcpu[disparojugadorx][disparojugadory]=1;
-                   return 1;
-               }
-               else
-               {
-                   return 0;
-               }
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        else
-        {
-            if(disparojugadorx<=9 && disparojugadorx>=0&& disparojugadory<=9 && disparojugadory>=0)
-            {
-               if(matrizjugador[disparojugadorx][disparojugadory]==0)
-               {
-                   matrizjugador[disparojugadorx][disparojugadory]=1;
-                   return 1;
-               }
-               else
-               {
-                   return 0;
-               }
-            }
-            else
-            {
-                return 0;
-            }
-        }
+           a=1;
+           return a;
+       }
+       else
+       {
+           return a;
+       }
    } 
 }
 

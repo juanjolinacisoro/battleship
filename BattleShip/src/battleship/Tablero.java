@@ -17,17 +17,19 @@ public class Tablero
     public String[][] tablero1;
     
     
-    public Tablero (int x, int y, String[][] tablero) //debiera de pedir el tablero actual y el disparo
+    public Tablero () //debiera de pedir el tablero actual y el disparo
     {
-        
+        this.disparojugadorx =0; // se supone que va el lugar validado
+        this.disparojugadory =0; // se supone que va el tiro validado
+        this.tablero1= new String[10][10];
+    }
+    
+    public String[][] actualizarTablero(int x, int y, String[][] tablero)
+    {
         this.disparojugadorx = x; // se supone que va el lugar validado
         this.disparojugadory = y; // se supone que va el tiro validado
         this.tablero1=tablero;
         
-    }
-    
-    public String[][] actualizarTablero()
-    {
         switch(tablero1[disparojugadorx][disparojugadory])
         {
             case "O":
@@ -40,8 +42,9 @@ public class Tablero
         }
         return this.tablero1;
     }
-    public boolean hayGanador()
+    public boolean hayGanador(String[][] tablero)
     {
+        this.tablero1 = tablero;
         int aciertos = 0;
         for (int i = 0; i < 10; i++) 
         {
@@ -54,7 +57,7 @@ public class Tablero
             }
         }
         
-        if(aciertos == 15)
+        if(aciertos == 17)
         {
             return true;
         }
