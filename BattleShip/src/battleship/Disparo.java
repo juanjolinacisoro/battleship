@@ -31,7 +31,8 @@ class Disparo
        this.disparojugadory = y;
        this.disparos = tablero;
        
-       if(disparojugadorx<=9 && disparojugadorx>=0&& disparos[disparojugadorx][disparojugadory]!="X"&& disparos[disparojugadorx][disparojugadory]!="H")
+       if(disparojugadorx<=9 && disparojugadorx>=0 && disparojugadory<=9 && disparojugadory>=0 &&
+          disparos[disparojugadorx][disparojugadory]!="X"&& disparos[disparojugadorx][disparojugadory]!="H")
        {
            a=1;
            return a;
