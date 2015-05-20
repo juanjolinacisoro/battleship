@@ -5,6 +5,7 @@
  */
 package battleship;
 
+
 /**
  *
  * @author Usuario
@@ -12,7 +13,7 @@ package battleship;
 public class Tablero 
 {
     
-    public int disparojugadorx;
+    public int disparojugadorx; //Atributos que tiene la clase Tablero
     public int disparojugadory;
     public String[][] tablero1;
     
