@@ -12,25 +12,24 @@ import java.util.Random;
 public class InteligenciaArtificial 
 {
     Random rnd = new Random();
-    int x;
-    int y;
-    int n;
-    int m;
-    String[][] tablero;
-    boolean[] entrar;
+    int x; // Disparo que se generará en x
+    int y; // Disparo que se generará en y
+    int n; // Variable que me permite salir de la revisión de la matriz si genera un disparo.
+    String[][] tablero;//Matriz que me muestra el tablero del jugador
+    boolean[] entrar; // Variable que me permite no repetir la busqueda hacia una dirección
    public InteligenciaArtificial()
    {
        x = 0;
        y = 0;
        n = 0;
-       m = 0;
        tablero = new String[10][10];
        entrar = new boolean [4];
    }
+   // Este metodo crea un disparo que intenta buscar un barco una vez que se sabe que se le ha disparado.
    public void PrepararDisparo(String[][] tableroJugador)
    {
        this.tablero = tableroJugador;
-       //Iniciar el proceso de busqueda para que entre a los cuatro for
+       //Iniciar el proceso de busqueda para que entre a los cuatro for de cada dirección
        for (int i = 0; i < 4; i++) 
        {
           entrar[i]=false; 
@@ -44,10 +43,12 @@ public class InteligenciaArtificial
                {
                     while(n<=3 && (entrar[0]==false||entrar[0]==false||entrar[1]==false||entrar[2]==false||entrar[3]==false))
                     {
+                        // permite entrar aleatoriamente a una dirección de busqueda.
                         n=(int)(rnd.nextDouble() * 4.0);
-                        // Hacia abajo.
+                        // Busca Hacia abajo.
                         for (int k = 1;n == 0 && entrar[0]==false; k++) 
                         {
+                            
                             if(j+k<10)
                             {
                                 //Eliminar la opciones verticales cuando se sabe que el barco esta horizontal.
@@ -67,7 +68,7 @@ public class InteligenciaArtificial
                                 entrar[0]=true;
                             }
                         }
-                        //Hacia arriba
+                        //Busca Hacia arriba
                         for (int k = 1;n == 1 && entrar[1]==false; k++) 
                         {
                             if(j-k >= 0)
@@ -88,7 +89,7 @@ public class InteligenciaArtificial
                                 entrar[1]=true;
                             }
                         }
-                        //Hacia derecha
+                        //Busca Hacia derecha
                         for (int k = 1;n == 2 && entrar[2]==false; k++) 
                         {
                             if(i+k < 10)
@@ -109,28 +110,11 @@ public class InteligenciaArtificial
                                 entrar[2]=true;
                             }
                         }
-                        //Hacia izquierda
+                        //Busca Hacia izquierda
                         for (int k = 1;n == 3 && entrar[3]==false ; k++) 
                         {
                             if(i-k >= 0)
                             {
-                                if(i+1 < 10)
-                                 {
-                                    if(tablero[i+1][j]=="H")
-                                    {
-                                        entrar[0]=true;
-                                        entrar[1]=true;
-                                    }
-                                 }
-                                 if(j-1 > 0)
-                                 {
-                                    if(tablero[i-1][j]=="H")
-                                    {
-                                        entrar[0]=true;
-                                        entrar[1]=true;
-                                    }
-                                 }
-
                                 if(tablero[i-k][j]=="O"||tablero[i-k][j]=="B")
                                 {
                                     x = i-k;
@@ -152,7 +136,7 @@ public class InteligenciaArtificial
            }
        }
    }
-   
+   //Este metodo indica que si encontro un disparo que retorne la parte x sino que genere un x entre 0 y 9 
    public int Dispararx()
    {
        if(n!=4)
@@ -165,6 +149,7 @@ public class InteligenciaArtificial
            return x;
        }
    }
+   //Este metodo indica que si encontro un disparo que retorne la parte y sino que genere un y entre 0 y 9 
    public int Disparary()
    {
        if(n!=4)
