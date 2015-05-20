@@ -1,0 +1,233 @@
+CASOS DE PRUEBA
+Un caso de prueba de software es un conjunto de pasos y resultados esperados usados para probar una aplicación. 
+Este se crea a partir de los requisitos del software.
+
+Identificación de requerimientos:
+1)Validación de entradas
+2)Jugador gana el juego
+3)Computador gana el juego
+
+DESARROLLO
+Nombre del caso de prueba: Validación de entradas
+Propósito: Asegurarse que los datos ingresados estén dentro del tablero.
+Ambiente de prueba/configuración: La aplicación esta desarrollada en el lenguaje de programación java y el ambiente de programacion IDE NetBeans IDE 8.0.2.
+Acciones: Ingresar valores de entrada para x e y fuera del rango [0,9] (Fuera del tablero).
+Salida esperada:Se espera que al ingresar datos fuera del rango [0,9] la aplicación vuelva a pedir los datos de entrada que estén fuera de este rango.
+Resultados: A continuación se presentan los resultados para el caso de prueba para la validación de entradas.
+
+**TABLERO COMPUTADOR**|| ******TU TABLERO*****
+   0 1 2 3 4 5 6 7 8 9  || 0 1 2 3 4 5 6 7 8 9 
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+0 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+1 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+2 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+3 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+4 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+5 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+6 |O|O|O|O|O|O|O|O|O|O| || |B|B|B|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+7 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+8 |O|O|O|O|O|O|O|O|O|O| || |O|B|B|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+9 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+Ingrese la pocision x del disparo
+-2
+Ingrese la pocision y del disparo
+-2
+Ingrese la pocision x del disparo
+8
+Ingrese la pocision y del disparo
+7
+**TABLERO COMPUTADOR**|| ******TU TABLERO*****
+   0 1 2 3 4 5 6 7 8 9  || 0 1 2 3 4 5 6 7 8 9 
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+0 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+1 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+2 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+3 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+4 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+5 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+6 |O|O|O|O|O|O|O|O|O|O| || |B|B|B|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+7 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+8 |O|O|O|O|O|O|O|X|O|O| || |O|B|B|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+9 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+**TABLERO COMPUTADOR**|| ******TU TABLERO*****
+   0 1 2 3 4 5 6 7 8 9  || 0 1 2 3 4 5 6 7 8 9 
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+0 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+1 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+2 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+3 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+4 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+5 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+6 |O|O|O|O|O|O|O|O|O|O| || |B|B|B|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+7 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+8 |O|O|O|O|O|O|O|X|O|O| || |O|B|B|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+9 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|X|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+Ingrese la pocision x del disparo
+10
+Ingrese la pocision y del disparo
+10
+Ingrese la pocision x del disparo
+6
+Ingrese la pocision y del disparo
+2
+**TABLERO COMPUTADOR**|| ******TU TABLERO*****
+   0 1 2 3 4 5 6 7 8 9  || 0 1 2 3 4 5 6 7 8 9 
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+0 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+1 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+2 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+3 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+4 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+5 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+6 |O|O|H|O|O|O|O|O|O|O| || |B|B|B|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+7 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+8 |O|O|O|O|O|O|O|X|O|O| || |O|B|B|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+9 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|X|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+**TABLERO COMPUTADOR**|| ******TU TABLERO*****
+   0 1 2 3 4 5 6 7 8 9  || 0 1 2 3 4 5 6 7 8 9 
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+0 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+1 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+2 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+3 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+4 |O|O|O|O|O|O|O|O|O|O| || |O|O|X|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+5 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+6 |O|O|H|O|O|O|O|O|O|O| || |B|B|B|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+7 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+8 |O|O|O|O|O|O|O|X|O|O| || |O|B|B|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+9 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|X|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+Ingrese la pocision x del disparo
+-4
+Ingrese la pocision y del disparo
+10
+Ingrese la pocision x del disparo
+5
+Ingrese la pocision y del disparo
+7
+**TABLERO COMPUTADOR**|| ******TU TABLERO*****
+   0 1 2 3 4 5 6 7 8 9  || 0 1 2 3 4 5 6 7 8 9 
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+0 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+1 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+2 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+3 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+4 |O|O|O|O|O|O|O|O|O|O| || |O|O|X|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+5 |O|O|O|O|O|O|O|X|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+6 |O|O|H|O|O|O|O|O|O|O| || |B|B|B|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+7 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+8 |O|O|O|O|O|O|O|X|O|O| || |O|B|B|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+9 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|X|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+**TABLERO COMPUTADOR**|| ******TU TABLERO*****
+   0 1 2 3 4 5 6 7 8 9  || 0 1 2 3 4 5 6 7 8 9 
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+0 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+1 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|B|B|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+2 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|X|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+3 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+4 |O|O|O|O|O|O|O|O|O|O| || |O|O|X|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+5 |O|O|O|O|O|O|O|X|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+6 |O|O|H|O|O|O|O|O|O|O| || |B|B|B|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+7 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+8 |O|O|O|O|O|O|O|X|O|O| || |O|B|B|B|B|B|B|B|O|O|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+9 |O|O|O|O|O|O|O|O|O|O| || |O|O|O|O|O|O|O|O|O|X|
+  +-+-+-+-+-+-+-+-+-+-+ || +-+-+-+-+-+-+-+-+-+-+
+
+
+
+El resultado obtenido para el caso de prueba realizado es correcto. En primera instacia se ingresan datos negativos de entrada, por lo que la aplicación 
+señala que se deben volver a ingresar datos que se sitúen dentro del rango del tablero. Al ingresar el dato x=8 e y=7 se aprecia que se marca con un a X
+(Disparo fallido) en el tablero del computador.
+
+  0 1 2 3 4 5 6 7 8 9   ||
+  +-+-+-+-+-+-+-+-+-+-+ || 
+0 |O|O|O|O|O|O|O|O|O|O| ||
+  +-+-+-+-+-+-+-+-+-+-+ || 
+1 |O|O|O|O|O|O|O|O|O|O| || 
+  +-+-+-+-+-+-+-+-+-+-+ || 
+2 |O|O|O|O|O|O|O|O|O|O| || 
+  +-+-+-+-+-+-+-+-+-+-+ || 
+3 |O|O|O|O|O|O|O|O|O|O| || 
+  +-+-+-+-+-+-+-+-+-+-+ || 
+4 |O|O|O|O|O|O|O|O|O|O| || 
+  +-+-+-+-+-+-+-+-+-+-+ || 
+5 |O|O|O|O|O|O|O|O|O|O| || 
+  +-+-+-+-+-+-+-+-+-+-+ || 
+6 |O|O|O|O|O|O|O|O|O|O| || 
+  +-+-+-+-+-+-+-+-+-+-+ || 
+7 |O|O|O|O|O|O|O|O|O|O| || 
+  +-+-+-+-+-+-+-+-+-+-+ || 
+8 |O|O|O|O|O|O|O|X|O|O| || 
+  +-+-+-+-+-+-+-+-+-+-+ || 
+9 |O|O|O|O|O|O|O|O|O|O| ||
+  +-+-+-+-+-+-+-+-+-+-+
+
+Para los siguientes datos de ingreso incorrectos se aprecian los mismos resultados.
