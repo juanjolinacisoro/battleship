@@ -61,6 +61,7 @@ public class BattleShip {
                 while(validar == 0)
                 {
                     InteligenciaArtificial ia = new InteligenciaArtificial();
+                    ia.PrepararDisparo(tableroJugador);
                     x = ia.Dispararx();
                     y = ia.Disparary();
                     Disparo disp= new Disparo();
