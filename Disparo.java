@@ -1,76 +1,56 @@
+
+package battleship;
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Autor: David Revillot <drevillot10@alumnos.utalca.cl> 
  */
 
-
-package battle;
-
-/**
- *
- * @author Usuario
- */
 class Disparo  
 {
-    public int disparojugadorx;
-    public int disparojugadory;
-    public int jugador;
-    int[][] matrizjugador;
-    int[][] matrizcpu;
+    /*
+    Atributos de la clase disparo. Posee los atributos disparojugadorx(posicion x del disparo),
+    disparojugadory(posicion y del disparo),a(Definicion de variable binaria,a=1 disparo validado, 0 no validado),
+    disparos(tablero que contiene los disparos) y jugador( no se utiliza)
+    */
+    public int DisparoJugadorX;
+    public int DisparoJugadorY;
+    public int Jugador;
+    String[][] Disparos;
+    int a;
     
+    //Constructor de la clase disparo
     public Disparo()
     {
-        disparojugadorx = 0;
-        disparojugadory = 0;
-        jugador = 0;
-        matrizjugador= new int [10][10];
-        matrizcpu= new int [10][10];
+        //Se inicializan los atributos de la clase disparo
+        DisparoJugadorX = 0;
+        DisparoJugadorY = 0;
+        Disparos = new String [10][10];
+        a=0;
     }   
-  
-   int validardisparo(int x, int y, int j) // que no se repita y este dentro del tablero
+   
+    /*
+    Metodo de la clase disparo que valida los disparos del jugador y de la cpu
+    @Parametros el metodo recibe la posicion x e y  del tablero que se desea validar
+    @Retorno Si el disparo esta dentro del tablero se retorna 1(Disparo validado).En caso contrario se retorna 0(disparo no validado)
+    @Version Definitiva
+    */
+    
+   int validardisparo(int x, int y,String[][] tablero) // que no se repita y este dentro del tablero
    {
-       this.disparojugadorx = x;
-       this.disparojugadory = y;
-       this.jugador = j;
+       //AsignaciÃ³n de datos a los atributos de la clase
+       this.DisparoJugadorX = x;
+       this.DisparoJugadorY = y;
+       this.Disparos = tablero;
        
-       if(jugador%2==0)
+       if(DisparoJugadorX<=9 && DisparoJugadorX>=0&& Disparos[DisparoJugadorX][DisparoJugadorY]!="X"&& Disparos[DisparoJugadorX][DisparoJugadorY]!="H")
        {
-            if(disparojugadorx<=9 && disparojugadorx>=0&& disparojugadory<=9 && disparojugadory>=0)
-            {
-               if(matrizcpu[disparojugadorx][disparojugadory]==0)
-               {
-                   matrizcpu[disparojugadorx][disparojugadory]=1;
-                   return 1;
-               }
-               else
-               {
-                   return 0;
-               }
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        else
-        {
-            if(disparojugadorx<=9 && disparojugadorx>=0&& disparojugadory<=9 && disparojugadory>=0)
-            {
-               if(matrizjugador[disparojugadorx][disparojugadory]==0)
-               {
-                   matrizjugador[disparojugadorx][disparojugadory]=1;
-                   return 1;
-               }
-               else
-               {
-                   return 0;
-               }
-            }
-            else
-            {
-                return 0;
-            }
-        }
+           
+           a=1;
+           return a;
+       }
+       else
+       {
+           
+           return a;
+       }
    } 
 }
