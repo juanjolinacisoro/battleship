@@ -1,21 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package battleship;
 
 import java.util.Scanner;
 
 /**
- *
- * @author Usuario
+  *@Autor Flavio Encina <fencina0@alumnos.utalca.cl> 
  */
 public class BattleShip {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) 
     {
         int x = 0; // Inicializa el disparo en x 
@@ -26,13 +18,13 @@ public class BattleShip {
         //INICIO DEL JUEGO    
         //Generar el tablero del jugador
         Barco barco1 = new Barco();
-        String[][] tableroJugador = barco1.getTableroLetra();
+        String[][] TableroJugador = barco1.getTableroLetra();
         //Generar el tablero de la Cpu
         Barco barco2 = new Barco();
-        String[][] tableroCpu = barco2.getTableroLetra();
+        String[][] TableroCpu = barco2.getTableroLetra();
         // Imprimir en pantalla los tableros iniciales en la modalidad que puede ver el jugador
         Interfaz interfaz1 = new Interfaz();
-        interfaz1.MostrarTablero(tableroCpu, tableroJugador);
+        interfaz1.MostrarTablero(TableroCpu, TableroJugador);
         //Comenzar a jugar. "j" representa el jugador.
         while (Ganador == false) 
         {
@@ -43,18 +35,18 @@ public class BattleShip {
                 //Genera el disparo del jugador
                 while(validar == 0)// pide disparos hasta que sean validos
                 {
-                    System.out.println("Ingrese la pocision x del disparo");
+                    System.out.println("Ingrese la posicion x del disparo");
                     x =leer.nextInt();
-                    System.out.println("Ingrese la pocision y del disparo");
+                    System.out.println("Ingrese la posicion y del disparo");
                     y =leer.nextInt();
                     Disparo disp= new Disparo();// Genera la instancia para la clase disparo
-                    validar = disp.validardisparo(x, y, tableroCpu);// Llama al metodo para validar el disparo entregado
+                    validar = disp.validardisparo(x, y, TableroCpu);// Llama al metodo para validar el disparo entregado
                 }
                 //Actualiza el tablero del Cpu ya que recibió un disparo
                 Tablero tablero = new Tablero();
-                tableroCpu = tablero.actualizarTablero(x, y, tableroCpu);
+                TableroCpu = tablero.actualizarTablero(x, y, TableroCpu);
                 //Pregunta si gana el jugador
-                Ganador = tablero.hayGanador(tableroCpu);
+                Ganador = tablero.hayGanador(TableroCpu);
                 jugador = 2;
             }
             else
@@ -64,24 +56,24 @@ public class BattleShip {
                 {
                     //En un comienzo solo dispara al azar, pero cuando encuentra un barco trata de buscarlo cerca
                     InteligenciaArtificial ia = new InteligenciaArtificial();
-                    ia.PrepararDisparo(tableroJugador);
+                    ia.PrepararDisparo(TableroJugador);
                     x = ia.Dispararx();
                     y = ia.Disparary();
                     
                     // Valida el disparo de la Cpu.
                     Disparo disp= new Disparo();
-                    validar=disp.validardisparo(x, y, tableroJugador);
+                    validar=disp.validardisparo(x, y, TableroJugador);
                 }
                 //Actualiza el tablero del jugador una vez generado el disparo de la computadora
                 Tablero tablero1 = new Tablero();
-                tableroJugador = tablero1.actualizarTablero(x, y, tableroJugador);
+                TableroJugador = tablero1.actualizarTablero(x, y, TableroJugador);
                 //Pregunta si gana el computador
-                Ganador = tablero1.hayGanador(tableroJugador);
+                Ganador = tablero1.hayGanador(TableroJugador);
                 jugador=1;
             }
             // Imprime los tableros actualizados.
             Interfaz inter = new Interfaz();
-            inter.MostrarTablero(tableroCpu, tableroJugador);
+            inter.MostrarTablero(TableroCpu, TableroJugador);
         }
     }
     

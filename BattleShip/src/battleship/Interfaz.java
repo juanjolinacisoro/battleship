@@ -21,6 +21,10 @@ public class Interfaz
     }
     public void MostrarTablero(String[][] tableroCpu,String[][] tableroJugador)
     {
+       for(int i=0 ; i<23 ; i++) //Con este ciclo pretendemos "limpiar" la pantalla, aúnque lo que realiza es imprimir la misma cantidad de lineas que contiene el tablero cosa de no mostrar el tablero anterior.
+        {
+            System.out.println();
+        }
         this.tableroJugador = tableroJugador;
         this.tableroCpu = tableroCpu;
         

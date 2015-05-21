@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package battleship;
 import java.util.Random;
 /**
  *
- * @author Usuario
+ * @Autor Flavio Encina <fencina0@alumnos.utalca.cl> 
  */
 public class InteligenciaArtificial 
 {
@@ -25,7 +20,13 @@ public class InteligenciaArtificial
        tablero = new String[10][10];
        entrar = new boolean [4];
    }
-   // Este metodo crea un disparo que intenta buscar un barco una vez que se sabe que se le ha disparado.
+   // Este metodo crea un disparo 
+   /*
+    Metodo de la clase disparo que intenta buscar un barco una vez que se sabe que se le ha disparado.
+    @Parametros el metodo recibe el  tablero
+    @Version Definitiva
+    */
+   
    public void PrepararDisparo(String[][] tableroJugador)
    {
        this.tablero = tableroJugador;
