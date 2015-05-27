@@ -1,16 +1,19 @@
 
-package battleship;
-/*
-Autor: David Revillot <drevillot10@alumnos.utalca.cl> 
+/**
+ * @author David Revillot <drevillot10@alumnos.utalca.cl> 
  */
+package battleship;
 
-class Disparo  
-{
-    /*
+
+   /*
     Atributos de la clase disparo. Posee los atributos disparojugadorxx(posicion x del disparo),
     disparojugadory(posicion y del disparo),a(Definicion de variable binaria,a=1 disparo validado, 0 no validado),
     disparos(tablero que contiene los disparos) y jugador( no se utiliza)
     */
+
+class Disparo  
+{
+    
     public int DisparoJugadorX;
     public int DisparoJugadorY;
     public int Jugador;
@@ -27,11 +30,11 @@ class Disparo
         a=0;
     }   
    
-    /*
+    /**
     Metodo de la clase disparo que valida los disparos del jugador y de la cpu
-    @Parametros el metodo recibe la posicion x e y  del tablero que se desea validar
-    @Retorno Si el disparo esta dentro del tablero se retorna 1(Disparo validado).En caso contrario se retorna 0(disparo no validado)
-    @Version Definitiva
+    @param x y tablero  el metodo recibe la posicion x e y  del tablero que se desea validar
+    @return a  Si el disparo esta dentro del tablero se retorna 1(Disparo validado).En caso contrario se retorna 0(disparo no validado)
+    @version Definitiva
     */
     
    int validardisparo(int x, int y,String[][] tablero) // que no se repita y este dentro del tablero
