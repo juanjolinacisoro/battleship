@@ -7,7 +7,7 @@ Autor: David Revillot <drevillot10@alumnos.utalca.cl>
 class Disparo  
 {
     /*
-    Atributos de la clase disparo. Posee los atributos disparojugadorx(posicion x del disparo),
+    Atributos de la clase disparo. Posee los atributos disparojugadorxx(posicion x del disparo),
     disparojugadory(posicion y del disparo),a(Definicion de variable binaria,a=1 disparo validado, 0 no validado),
     disparos(tablero que contiene los disparos) y jugador( no se utiliza)
     */
